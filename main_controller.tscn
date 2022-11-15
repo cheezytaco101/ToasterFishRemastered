@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cptm04m7cnfol"]
+
+[ext_resource type="PackedScene" uid="uid://b64m5dwrxr0sg" path="res://Levels/level_test.tscn" id="1_pm1rc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3gdbi"]
+sky_top_color = Color(0.956863, 0.866667, 0.772549, 1)
+sky_horizon_color = Color(1, 0.407843, 0.72549, 1)
+ground_bottom_color = Color(0, 0.921569, 0.898039, 1)
+ground_horizon_color = Color(0, 0.74902, 0.741176, 1)
+
+[sub_resource type="Sky" id="Sky_v0r1u"]
+sky_material = SubResource("ProceduralSkyMaterial_3gdbi")
+
+[sub_resource type="Environment" id="Environment_si8cq"]
+background_mode = 2
+sky = SubResource("Sky_v0r1u")
+
+[node name="Main Controller" type="Node3D"]
+
+[node name="Level Container" type="Node3D" parent="."]
+
+[node name="Level Test" parent="Level Container" instance=ExtResource("1_pm1rc")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_si8cq")
