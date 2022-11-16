@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bg6sjn0l7cgfo"]
+[gd_scene load_steps=11 format=3 uid="uid://bg6sjn0l7cgfo"]
 
 [ext_resource type="Script" path="res://Actors/Gilliam/gilliam.gd" id="1_40i0j"]
-[ext_resource type="Script" path="res://Actors/Gilliam/Skeleton3D.gd" id="2_pwc1r"]
 
 [sub_resource type="Image" id="Image_ixaix"]
 data = {
@@ -131,22 +130,21 @@ bones/3/enabled = true
 bones/3/position = Vector3(1.72054e-22, 1.04252, 8.88178e-15)
 bones/3/rotation = Quaternion(0.000334552, -2.12382e-05, 0.0725177, 0.997367)
 bones/3/scale = Vector3(1, 1, 1)
-script = ExtResource("2_pwc1r")
 
 [node name="Gilliam2" type="MeshInstance3D" parent="Gill_Rig/Skeleton3D"]
 mesh = SubResource("ArrayMesh_u4npf")
 skin = SubResource("Skin_l26c1")
 
 [node name="Physical Bone Gill_Root" type="PhysicalBone3D" parent="Gill_Rig/Skeleton3D"]
-transform = Transform3D(1, 5.84255e-15, 7.45058e-08, 7.45058e-08, -1.54731e-09, -1, 1.22521e-12, 0.970068, -1.51945e-09, -3.76254e-07, 0.602902, -5.2203e-09)
-joint_offset = Transform3D(1, 1.63004e-24, 1.65436e-24, -1.63004e-24, 1, 0, -1.65436e-24, 0, 1, 3.45189e-07, -1.34507e-11, 0.466945)
+transform = Transform3D(1, 5.84949e-15, 7.45058e-08, 7.45058e-08, -1.54731e-09, -1, 1.63183e-12, 0.960469, -1.51036e-09, -3.76254e-07, 0.602902, -5.2203e-09)
+joint_offset = Transform3D(1, 1.63004e-24, 1.65436e-24, -1.63004e-24, 1, 0, -1.65436e-24, 0, 1, 3.45189e-07, -1.79998e-11, 0.466945)
 joint_rotation = Vector3(0, 1.65436e-24, -1.63004e-24)
-body_offset = Transform3D(1, 5.86337e-15, 7.45058e-08, 7.45058e-08, -4.6312e-11, -1, 1.22508e-12, 0.970068, 2.78703e-11, -3.7998e-07, 0.466946, 3.41949e-14)
+body_offset = Transform3D(1, 5.8703e-15, 7.45058e-08, 7.45058e-08, -6.1164e-11, -1, 1.63169e-12, 0.960469, 3.6951e-11, -3.7998e-07, 0.466946, 3.41949e-14)
 mass = 1.5
 friction = 0.5
 bounce = 0.3
-linear_damp = 0.3
-angular_damp = 0.3
+linear_damp = 0.2
+angular_damp = 0.2
 bone_name = "Gill_Root"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gill_Rig/Skeleton3D/Physical Bone Gill_Root"]
@@ -154,15 +152,15 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_pji84")
 
 [node name="Physical Bone Gill_Abdo" type="PhysicalBone3D" parent="Gill_Rig/Skeleton3D"]
-transform = Transform3D(0.994886, -6.89405e-06, 0.101733, -0.101784, 0.000472579, 0.994836, -5.40313e-05, -0.999989, 0.000466148, -0.0596835, -0.405156, -1.60241e-05)
+transform = Transform3D(0.994886, -6.89405e-06, 0.101733, -0.101784, 0.000472579, 0.994836, -5.35719e-05, -0.999989, 0.000463239, -0.0596835, -0.405156, -1.60241e-05)
 joint_type = 2
-joint_offset = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.0043261, 0.000237505, 0.544364)
+joint_offset = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.0043261, 0.000235923, 0.544364)
 joint_rotation = Vector3(1.5708, 1.5708, 0)
-body_offset = Transform3D(1.00008, -1.06428e-06, -6.00517e-06, 3.99202e-05, -1.71515e-06, -1.00002, 1.35473e-07, 0.999989, 1.57912e-06, -0.00432317, 0.544376, -0.000238363)
+body_offset = Transform3D(1.00008, -1.06428e-06, -6.00517e-06, 3.99202e-05, -1.71515e-06, -1.00002, -3.23931e-07, 0.999989, 4.48906e-06, -0.00432317, 0.544376, -0.000238363)
 friction = 0.5
 bounce = 0.3
-linear_damp = 0.3
-angular_damp = 0.3
+linear_damp = 0.2
+angular_damp = 0.2
 bone_name = "Gill_Abdo"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 30.0
